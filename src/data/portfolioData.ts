@@ -1,7 +1,7 @@
 import { Project, SkillCategory, ExperienceItem, EducationItem, LeadershipItem, CertificationItem } from '../types/portfolio';
 
 // Link to resume stored in Google Drive (User can edit this URL anytime)
-export const GOOGLE_DRIVE_RESUME_URL = 'https://drive.google.com/file/d/1_SAMPLE_GOOGLE_DRIVE_RESUME_LINK/view?usp=sharing';
+export const GOOGLE_DRIVE_RESUME_URL = 'https://drive.google.com/file/d/1h8xqSjzrvi2qqKEwDjLitEKXxj9S4PYl/view?usp=sharing';
 
 export const PERSONAL_INFO = {
   name: 'SAI SARVESH R',

@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/layout/Navbar';
 import { Footer } from './components/layout/Footer';
-import { AIChatbot } from './components/common/AIChatbot';
 
 import { Home } from './pages/Home';
 import { About } from './pages/About';
@@ -35,7 +34,6 @@ export const App: React.FC = () => {
           </Routes>
         </main>
         <Footer />
-        <AIChatbot />
       </div>
     </Router>
   );

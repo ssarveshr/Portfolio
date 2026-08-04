@@ -55,6 +55,7 @@ export const ProjectDetail: React.FC = () => {
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center space-x-2 px-4 py-2.5 rounded-2xl bg-white border border-slate-200 text-slate-800 text-xs font-bold shadow-xs hover:border-slate-300"
+                id='hi'
               >
                 <Github className="w-4 h-4 text-slate-700" />
                 <span>GitHub Repository</span>

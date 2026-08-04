@@ -9,54 +9,90 @@ export const Home: React.FC = () => {
       {/* Hero Section */}
       <section className="relative pt-28 pb-20 md:pt-36 md:pb-28 overflow-hidden">
         {/* Soft colorful background blur spots */}
-        <div className="absolute top-12 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-gradient-to-tr from-sky-200/50 via-indigo-200/40 to-purple-200/30 rounded-full blur-3xl pointer-events-none -z-10" />
+        <div className="absolute top-12 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-gradient-to-tr from-sky-200/50 via-indigo-200/40 to-purple-200/30 rounded-full blur-3xl pointer-events-none -z-10" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl space-y-6">
-            {/* Status Pill */}
-            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-700 text-xs font-semibold shadow-xs">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              <span>Seeking Internships & Project Opportunities</span>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+            {/* Left Content Column */}
+            <div className="lg:col-span-7 space-y-6">
+              {/* Status Pill */}
+              <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-700 text-xs font-semibold shadow-xs">
+                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                <span>Seeking Internships & Project Opportunities</span>
+              </div>
+
+              <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight">
+                Hi, I'm <span className="gradient-heading">{PERSONAL_INFO.name}</span>
+              </h1>
+
+              <p className="text-lg sm:text-xl font-bold text-indigo-600 font-mono">
+                {PERSONAL_INFO.subTitle}
+              </p>
+
+              <p className="text-slate-600 text-base sm:text-lg leading-relaxed max-w-2xl">
+                Computer Science student at RNSIT & Backend Developer Trainee with hands-on experience building RESTful APIs, smart contract integrations, and full-stack web platforms.
+              </p>
+
+              {/* Action buttons */}
+              <div className="flex flex-wrap gap-4 pt-2 items-center">
+                <Link
+                  to="/projects"
+                  className="inline-flex items-center space-x-2 px-6 py-3.5 rounded-2xl bg-gradient-to-r from-sky-500 to-indigo-600 text-white font-bold text-xs shadow-lg shadow-sky-500/25 hover:shadow-sky-500/40 hover:scale-[1.02] transition-all"
+                >
+                  <span>Explore Projects</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+
+                <a
+                  href={GOOGLE_DRIVE_RESUME_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center space-x-2 px-6 py-3.5 rounded-2xl bg-white border border-slate-200 text-slate-800 font-bold text-xs shadow-sm hover:bg-slate-50 hover:border-slate-300 transition-all"
+                >
+                  <Download className="w-4 h-4 text-indigo-600" />
+                  <span>Resume PDF (GDrive)</span>
+                </a>
+
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center space-x-2 px-5 py-3.5 rounded-2xl text-slate-600 hover:text-slate-900 text-xs font-semibold hover:bg-slate-100/80 transition-all"
+                >
+                  <span>Get in Touch</span>
+                </Link>
+              </div>
             </div>
 
-            <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight">
-              Hi, I'm <span className="gradient-heading">{PERSONAL_INFO.name}</span>
-            </h1>
+            {/* Right Column: Semi-Circle Arch Profile Photo Container */}
+            <div className="lg:col-span-5 flex justify-center lg:justify-end">
+              <div className="relative group max-w-xs sm:max-w-sm w-full">
+                {/* Decorative background glow */}
+                <div className="absolute -inset-2 bg-gradient-to-tr from-sky-400 via-indigo-500 to-purple-600 rounded-t-[180px] rounded-b-[40px] blur-xl opacity-30 group-hover:opacity-50 transition duration-500" />
 
-            <p className="text-lg sm:text-xl font-bold text-indigo-600 font-mono">
-              {PERSONAL_INFO.subTitle}
-            </p>
+                {/* Outer Frame with Arch / Semi-Circle Top Shape */}
+                <div className="relative p-2 rounded-t-[170px] rounded-b-[36px] bg-gradient-to-tr from-sky-400 via-indigo-500 to-purple-600 shadow-2xl shadow-indigo-500/20">
+                  {/* Inner Photo Wrapper */}
+                  <div className="overflow-hidden rounded-t-[162px] rounded-b-[30px] bg-white aspect-[4/5] relative">
+                    <img
+                      src="/profile.jpg"
+                      alt="Sai Sarvesh R"
+                      className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                    />
+                    {/* Subtle Overlay Gradient at base */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 via-transparent to-transparent pointer-events-none" />
+                  </div>
+                </div>
 
-            <p className="text-slate-600 text-base sm:text-lg leading-relaxed max-w-2xl">
-              Computer Science student at RNSIT & Backend Developer Trainee with hands-on experience building RESTful APIs, smart contract integrations, and full-stack web platforms.
-            </p>
-
-            {/* Action buttons */}
-            <div className="flex flex-wrap gap-4 pt-2 items-center">
-              <Link
-                to="/projects"
-                className="inline-flex items-center space-x-2 px-6 py-3.5 rounded-2xl bg-gradient-to-r from-sky-500 to-indigo-600 text-white font-bold text-xs shadow-lg shadow-sky-500/25 hover:shadow-sky-500/40 hover:scale-[1.02] transition-all"
-              >
-                <span>Explore Projects</span>
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-
-              <a
-                href={GOOGLE_DRIVE_RESUME_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center space-x-2 px-6 py-3.5 rounded-2xl bg-white border border-slate-200 text-slate-800 font-bold text-xs shadow-sm hover:bg-slate-50 hover:border-slate-300 transition-all"
-              >
-                <Download className="w-4 h-4 text-indigo-600" />
-                <span>Resume PDF (GDrive)</span>
-              </a>
-
-              <Link
-                to="/contact"
-                className="inline-flex items-center space-x-2 px-5 py-3.5 rounded-2xl text-slate-600 hover:text-slate-900 text-xs font-semibold hover:bg-slate-100/80 transition-all"
-              >
-                <span>Get in Touch</span>
-              </Link>
+                {/* Floating Badge Overlay */}
+                <div className="absolute -bottom-4 -left-4 glass-panel px-4 py-2.5 rounded-2xl shadow-lg border border-slate-200/80 flex items-center space-x-3 bg-white/95 backdrop-blur-md">
+                  <div className="w-8 h-8 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center font-bold text-xs border border-indigo-100">
+                    <Code2 className="w-4 h-4 text-indigo-600" />
+                  </div>
+                  <div>
+                    <p className="text-[11px] font-extrabold text-slate-900 leading-none">B.E. CSE @ RNSIT</p>
+                    <p className="text-[10px] font-mono text-indigo-600 font-semibold mt-0.5">GPA: 8.5/10</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -64,7 +100,7 @@ export const Home: React.FC = () => {
 
       {/* Metrics Bar */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="glass-panel p-6 rounded-3xl text-center space-y-1">
             <h3 className="text-3xl font-black text-indigo-600 font-mono">8.5 / 10</h3>
             <p className="text-xs text-slate-500 font-semibold uppercase tracking-wider">B.E. CSE GPA</p>
@@ -72,10 +108,6 @@ export const Home: React.FC = () => {
           <div className="glass-panel p-6 rounded-3xl text-center space-y-1">
             <h3 className="text-3xl font-black text-sky-600 font-mono">3 Major</h3>
             <p className="text-xs text-slate-500 font-semibold uppercase tracking-wider">Engineering Systems</p>
-          </div>
-          <div className="glass-panel p-6 rounded-3xl text-center space-y-1">
-            <h3 className="text-3xl font-black text-indigo-600 font-mono">150+</h3>
-            <p className="text-xs text-slate-500 font-semibold uppercase tracking-wider">Students Mentored</p>
           </div>
           <div className="glass-panel p-6 rounded-3xl text-center space-y-1">
             <h3 className="text-3xl font-black text-purple-600 font-mono">3</h3>
