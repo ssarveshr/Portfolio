@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Bot, X, Send, User, Sparkles } from 'lucide-react';
-import { PERSONAL_INFO, GOOGLE_DRIVE_RESUME_URL } from '../../data/portfolioData';
+import { GOOGLE_DRIVE_RESUME_URL } from '../../data/portfolioData';
 
 interface Message {
   sender: 'bot' | 'user';

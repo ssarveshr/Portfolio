@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Download, Github, Linkedin, Mail, Code2, Sparkles, Award, ExternalLink } from 'lucide-react';
+import { ArrowRight, Download, Code2 } from 'lucide-react';
 import { PERSONAL_INFO, PROJECTS, SKILL_CATEGORIES, GOOGLE_DRIVE_RESUME_URL } from '../data/portfolioData';
 
 export const Home: React.FC = () => {
