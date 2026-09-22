@@ -2,7 +2,7 @@ export interface Project {
   id: string;
   title: string;
   subtitle?: string;
-  category: 'Fullstack' | 'Backend & Blockchain' | 'AI & ML';
+  category: 'Fullstack' | 'Backend & Blockchain' | 'AI & ML' |"AI & Full-Stack";
   date: string;
   tools: string[];
   description: string;
