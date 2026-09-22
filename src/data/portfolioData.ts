@@ -9,7 +9,7 @@ export const PERSONAL_INFO = {
   subTitle: 'Backend Developer Trainee | Full Stack Developer | GDG Technical Head',
   phone: '+91-7829122658',
   email: '1rn23cs178.saisarveshr@gmail.com',
-  linkedin: 'https://linkedin.com/in/saisarveshr',
+  linkedin: 'https://linkedin.com/in/sai-sarvesh-r',
   github: 'https://github.com/ssarveshr',
   location: 'Bangalore, Karnataka - 560075, India',
   objective: 'Computer Science and Engineering student seeking internships and project opportunities to apply and strengthen programming and software development skills while gaining hands-on industry experience.',
