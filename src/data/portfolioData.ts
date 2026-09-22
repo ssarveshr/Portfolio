@@ -24,6 +24,80 @@ export const PERSONAL_INFO = {
 };
 
 export const PROJECTS: Project[] = [
+    {
+    id: 'reposense',
+    title: 'RepoSense',
+    subtitle: 'Semantic Repository Intelligence Platform',
+    category: 'AI & Full-Stack',
+    date: 'September 2026',
+    tools: [
+      'React',
+      'Python',
+      'FastAPI',
+      'ChromaDB',
+      'Ollama',
+      'Sentence-Transformers',
+      'GitHub API'
+    ],
+    featured: true,
+
+    description:
+      'An AI-powered repository discovery and intelligence platform that uses semantic search and local LLMs to help developers discover and understand open-source projects by meaning rather than keywords.',
+
+    problemStatement:
+      'Finding relevant open-source repositories through keyword-based GitHub search can make it difficult to discover projects based on their actual purpose, architecture, or functionality, while understanding a repository often requires manually exploring its metadata, README, and files.',
+
+    keyFeatures: [
+      'Built a decoupled full-stack architecture using React (Vite), FastAPI, ChromaDB, Sentence-Transformers, and a local Qwen2.5-Coder:3b model served through Ollama.',
+      'Developed semantic repository discovery using vector embeddings and ChromaDB, enabling developers to search repositories based on meaning rather than keywords.',
+      'Implemented an AI summarization pipeline that fetches GitHub repository metadata and README content without cloning repositories.',
+      'Generated structured AI summaries covering repository purpose, technology stack, architecture, and notable files.',
+      'Built a crawler service for indexing trending GitHub repositories to support semantic discovery.'
+    ],
+
+    architecture:
+      'Decoupled full-stack architecture with a React (Vite) frontend communicating with a FastAPI backend. Repository data is obtained through the GitHub API, embeddings are generated using Sentence-Transformers and stored in ChromaDB for semantic search, while a local Qwen2.5-Coder:3b model served through Ollama powers repository summarization.',
+
+    engineeringChallenges: [
+      'Building semantic repository discovery using vector embeddings instead of traditional keyword-based search.',
+      'Generating useful repository summaries without cloning repositories by efficiently fetching GitHub metadata and README content.',
+      'Integrating a locally hosted Qwen2.5-Coder:3b model with the backend AI summarization pipeline.'
+    ],
+    
+    futureImprovements: [
+      'Expand repository indexing beyond trending repositories for broader semantic discovery.',
+      'Improve summarization and retrieval quality through optimized chunking, caching, and embedding strategies.',
+      'Support deeper repository analysis by incorporating additional source files and project structure.'
+    ],
+    
+    githubUrl: 'https://github.com/ssarveshr/RepoSense-Intelligent-Repository-Discovery-and-Collaboration-Platform'
+  },
+  {
+    id: 'eventx',
+    title: 'EventX',
+    subtitle: 'Campus Event Management System',
+    category: 'Fullstack',
+    date: 'June 2025',
+    tools: ['Node.js', 'Express.js', 'React.js', 'MongoDB', 'Bootstrap'],
+    featured: true,
+    description: 'A full-stack campus event operations platform enabling automated event creation, participant registration, and real-time attendance tracking.',
+    problemStatement: 'Campus events suffered from fragmented registration spreadsheets, long physical queues for attendance verification, and high manual coordination friction across multiple departments.',
+    keyFeatures: [
+      'Architected and delivered a full-stack platform for campus event operations, enabling event setup, participant onboarding, and attendance monitoring across 10+ events with 800+ registrations.',
+      'Implemented role-based authorization for administrators, organizers, and participants, streamlining coordination and real-time oversight across 5+ departments.',
+      'Engineered secure authentication and automated registration pipelines, improving operational efficiency and reducing manual coordination by 60% during department-level fests.'
+    ],
+    architecture: 'Single-Page Application (React.js) coupled with Node.js/Express API gateway and MongoDB document storage for fast horizontal read scaling during peak registration surges.',
+    engineeringChallenges: [
+      'Handling sudden registration spikes during fest launches without database locking or race conditions.',
+      'Designing flexible schema models for diverse event types and ticket structures.'
+    ],
+    futureImprovements: [
+      'QR Code badge scanning integration for instant check-in verification.',
+      'Automated email & WhatsApp notification triggers for event reminders.'
+    ],
+    githubUrl: 'https://github.com/ssarveshr/DBMS-project-',
+  },
   {
     id: 'tenant-bridge',
     title: 'Tenant Bridge',
@@ -50,60 +124,8 @@ export const PROJECTS: Project[] = [
       'Implement Layer-2 scaling solutions (Polygon/Arbitrum) to reduce gas fees for smart contract creation.',
       'Add automated security deposit lock & refund automation powered by Escrow smart contracts.'
     ],
-    githubUrl: 'https://github.com/ssarveshr',
+    githubUrl: 'https://github.com/ssarveshr/Tenant-Bridge',
   },
-  {
-    id: 'eventx',
-    title: 'EventX',
-    subtitle: 'Campus Event Management System',
-    category: 'Fullstack',
-    date: 'June 2025',
-    tools: ['Node.js', 'Express.js', 'React.js', 'MongoDB', 'Bootstrap'],
-    featured: true,
-    description: 'A full-stack campus event operations platform enabling automated event creation, participant registration, and real-time attendance tracking.',
-    problemStatement: 'Campus events suffered from fragmented registration spreadsheets, long physical queues for attendance verification, and high manual coordination friction across multiple departments.',
-    keyFeatures: [
-      'Architected and delivered a full-stack platform for campus event operations, enabling event setup, participant onboarding, and attendance monitoring across 10+ events with 800+ registrations.',
-      'Implemented role-based authorization for administrators, organizers, and participants, streamlining coordination and real-time oversight across 5+ departments.',
-      'Engineered secure authentication and automated registration pipelines, improving operational efficiency and reducing manual coordination by 60% during department-level fests.'
-    ],
-    architecture: 'Single-Page Application (React.js) coupled with Node.js/Express API gateway and MongoDB document storage for fast horizontal read scaling during peak registration surges.',
-    engineeringChallenges: [
-      'Handling sudden registration spikes during fest launches without database locking or race conditions.',
-      'Designing flexible schema models for diverse event types and ticket structures.'
-    ],
-    futureImprovements: [
-      'QR Code badge scanning integration for instant check-in verification.',
-      'Automated email & WhatsApp notification triggers for event reminders.'
-    ],
-    githubUrl: 'https://github.com/ssarveshr',
-  },
-  {
-    id: 'fake-review-detection',
-    title: 'Fake Review Detection System',
-    subtitle: 'NLP & Machine Learning Powered Review Authenticator',
-    category: 'AI & ML',
-    date: 'January 2026',
-    tools: ['Python', 'Flask', 'Node.js', 'Express.js', 'MongoDB', 'Scikit-learn', 'NLP'],
-    featured: true,
-    description: 'An end-to-end review analysis pipeline utilizing NLP text classification techniques to detect deceptive and spam content in real time.',
-    problemStatement: 'E-commerce and review platforms face reputational damage due to astroturfing and machine-generated deceptive positive or negative reviews.',
-    keyFeatures: [
-      'Built an end-to-end review analysis pipeline to identify deceptive content using NLP-based text classification techniques.',
-      'Deployed TF-IDF feature extraction with Naive Bayes classification via a Python microservice, integrated with a Node.js REST interface for real-time inference.',
-      'Designed a modular backend with secure APIs and confidence scoring to support scalable moderation workflows and decision support.'
-    ],
-    architecture: 'Dual-Microservice Architecture: Node.js API server manages client requests and persistence in MongoDB, while proxying text analysis payloads to a dedicated Python Flask NLP inference engine.',
-    engineeringChallenges: [
-      'Optimizing feature matrix size in TF-IDF extraction to balance inference latency with classification accuracy.',
-      'Building asynchronous job processing between Python microservice and Node.js backend.'
-    ],
-    futureImprovements: [
-      'Upgrade from Naive Bayes to Transformer models (BERT/RoBERTa) for contextual sentiment analysis.',
-      'Implement browser extension for on-the-fly review checking on e-commerce sites.'
-    ],
-    githubUrl: 'https://github.com/ssarveshr',
-  }
 ];
 
 export const SKILL_CATEGORIES: SkillCategory[] = [
